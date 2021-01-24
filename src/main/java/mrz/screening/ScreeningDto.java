@@ -9,10 +9,11 @@ import java.time.ZonedDateTime;
 @AllArgsConstructor
 public class ScreeningDto {
 
+    private long id;
     private ZonedDateTime date;
     private long roomId;
 
     static ScreeningDto from(Screening screening) {
-        return new ScreeningDto(screening.getDate(), screening.getRoomId());
+        return new ScreeningDto(screening.getId(), screening.getDate(), screening.getRoomId());
     }
 }
